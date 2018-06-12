@@ -1,3 +1,4 @@
+package br.com.staroski.gc.example;
 
 public class MyClass {
 

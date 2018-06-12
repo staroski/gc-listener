@@ -1,3 +1,5 @@
+package br.com.staroski.gc.example;
+
 import static java.lang.System.out;
 
 import java.lang.ref.Reference;
