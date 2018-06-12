@@ -14,13 +14,14 @@ public class GcListenerExample {
 
     public static void main(String[] args) {
         try {
-            new GcListenerExample().executar();
+            GcListenerExample example = new GcListenerExample();
+            example.execute();
         } catch (Throwable t) {
             t.printStackTrace();
         }
     }
 
-    private void executar() throws Exception {
+    private void execute() throws Exception {
         // an listener that gets notified when an object is garbage collected
         GcListener<Integer> gcListener = objectKey -> out.printf("object binded with key %d was garbage collected%n", objectKey);
 
