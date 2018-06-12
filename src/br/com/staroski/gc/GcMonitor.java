@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * This class allows to detect when a object is garbage colleted.<br>
  * Two steps are necessary in order that a class can be notified about the garbage collection of some object:<br>
- * - It need to {@link #addGarbageListener(GcListener) add} an {@link GcListener listener} tho this class;<br>
+ * - It need to {@link #addGcListener(GcListener) add} an {@link GcListener listener} tho this class;<br>
  * - It need to {@link #bind(Object, Object) bind} the desired object with a key;<br>
  * If this steps are done then when a garbage collection occurs the method {@link GcListener#onGarbageCollected(Object)} will be called receiving the key of the
  * garbage collected object.
@@ -91,7 +91,7 @@ public final class GcMonitor {
      *            The listener to be added.
      * @return This object itself.
      */
-    public GcMonitor addGarbageListener(GcListener listener) {
+    public GcMonitor addGcListener(GcListener listener) {
         synchronized (listeners) {
             listeners.add(listener);
         }
@@ -118,7 +118,7 @@ public final class GcMonitor {
      *            The listener to be removed.
      * @return This object itself.
      */
-    public GcMonitor removeGarbageListener(GcListener listener) {
+    public GcMonitor removeGcListener(GcListener listener) {
         synchronized (listeners) {
             listeners.remove(listener);
         }
